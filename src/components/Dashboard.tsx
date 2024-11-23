@@ -74,7 +74,7 @@ export default function Dashboard() {
       <div className="p-6">
         <div className="mb-6">
           <h2 className="text-xl font-bold text-[#2B3674] mb-4">My Cards</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <CreditCard
               balance={5756}
               cardHolder="Eddy Cusuma"
@@ -88,16 +88,16 @@ export default function Dashboard() {
               cardNumber="3778 **** **** 1234"
               isDark={false}
             />
+            <TransactionList transactions={transactions} />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="space-y-6">
             <ActivityChart data={activityData} />
             <QuickTransfer contacts={contacts} />
           </div>
           <div className="space-y-6">
-            <TransactionList transactions={transactions} />
             <ExpenseChart data={expenseData} />
           </div>
         </div>

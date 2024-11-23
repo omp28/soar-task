@@ -1,16 +1,16 @@
 interface Contact {
-  name: string
-  role: string
-  avatar: string
+  name: string;
+  role: string;
+  avatar: string;
 }
 
 interface QuickTransferProps {
-  contacts: Contact[]
+  contacts: Contact[];
 }
 
 export default function QuickTransfer({ contacts }: QuickTransferProps) {
   return (
-    <div className="bg-white rounded-xl p-4">
+    <div className="bg-white rounded-xl p-4 ">
       <h2 className="text-lg font-bold text-[#2B3674] mb-4">Quick Transfer</h2>
       <div className="flex space-x-4 mb-6 overflow-x-auto">
         {contacts.map((contact, index) => (
@@ -33,11 +33,21 @@ export default function QuickTransfer({ contacts }: QuickTransferProps) {
         />
         <button className="bg-[#2B3674] text-white px-6 py-2 rounded-lg flex items-center">
           Send
-          <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          <svg
+            className="w-4 h-4 ml-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
           </svg>
         </button>
       </div>
     </div>
-  )
+  );
 }
